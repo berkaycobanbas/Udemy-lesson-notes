@@ -173,4 +173,115 @@ void main(List<String> args) {
 // + ve -
 // = atama islemleri
 // ++ ve --degiskenden sonra gelenler
+
+/////////////////////////////////////////////////////////////////
+
+// FOR-WHILE-DO WHILE DONGUSU
+// for : genellikle tekrar sayısı bilinen durumlarda kullanılır. yazım yöntemi şu şekildedir
+//while : bir koşul doğru oldugu sürece yapılacak işlemler için kullanılan döngü çeşidi
+//do - while : koşul sağlansın veya saglanmasın bir kere çalıştırılır ve sonra şart kontrol edilir.
+
+  String isim2 = "Berkay";
+  for (int i = 0; i < 5; i++) {
+    print("$isim2");
+    // For(döngünün tekrarlamasını sağlayacak olan değişken; tekrarlanmasını sağlayan şart; sonsuz döngüye girişi engellemek için değişkenin sabitlenmesini sağlayan işlem){yapmak istediğiniz işlem}
+  }
+
+  int sayac = 0;
+  while (sayac < 4) {
+    print("Deneme");
+    sayac++;
+  }
+
+  int sayac2 = 0;
+  do {
+    print("Deneme2");
+    sayac2++;
+  } while (sayac2 <= 3);
+
+  for (int i = 1; i < 4; i++) {
+    if (i < 5) {
+      print("i 5'den küçük");
+    } else {
+      print("i 5'den büyük");
+      continue;
+    }
+  }
+
+  // ÖDEVLER
+
+/**
+ * SORU 1 : 3 tane double değişken olusturup bunların ortalamasını yazdıran programı yazınız
+ * SORU 2 : Kenarlarını girdiğiniz üçgenin çeşidini yazdıran programı yazınız.
+ * SORU 3 : Vize ve final notlarını alıp dersi geçip geçmediğini bulan programı yazınız
+ * (geçme notu alt değeri = 50, vizenin %40 finalin %60ı alınır.)
+ * 
+ * SORU 4: Kendi adınızı ekrana 5 kere yazdıran uygulamayı tüm döngü ifadeleriyle yazınız.
+ * SORU 5: 1'den 100'e kadar olan ve 15 ile tam bölünen sayıların karelerini ekrana yazdırınız. 
+ * SORU 6: Tanımlanan int bir sayının faktoriyelini bulan uygulamayı yazınız.
+ */
+
+  double degisken1 = 2.2;
+  double degisken2 = 3.3;
+  double degisken3 = 4.5;
+  double sonuc = (degisken1 + degisken2 + degisken3) / 3;
+
+  print("$degisken1,$degisken2,$degisken3 sayilarinin ortalamasi : $sonuc");
+
+  int kenar1 = 1;
+  int kenar2 = 1;
+  int kenar3 = 3;
+
+  kenar1 == kenar2 && kenar1 != kenar3 ||
+          kenar1 == kenar3 && kenar1 != kenar2 ||
+          kenar3 == kenar2 && kenar3 != kenar1
+      ? print("Bu üçgen ikizkenar üçgendir")
+      : kenar1 == kenar2 && kenar1 == kenar3
+          ? print("Bu üçgen eş kenar ayni zamanda  ikizkenar üçgendir")
+          : kenar1 != kenar2 && kenar1 != kenar3
+              ? print("Bu üçgen çeşitkenar üçgendir")
+              : print("Ters giden birşeyler oldu.");
+
+  int vizenot = 10;
+  int finalnotu = 60;
+  double vize40 = vizenot * 40 / 100;
+  double final60 = finalnotu * 60 / 100;
+  double ortalama = (vize40 + final60);
+  ortalama > 50
+      ? print("Dersi geçtiniz.Geçme notunuz:$ortalama")
+      : print("Dersi geçemediniz.Notunuz : $ortalama");
+
+  String soyIsim2 = "Cobanbas";
+  String soyIsim3 = "AA";
+  String soyIsim4 = "BB";
+  int sayac3 = 0;
+  int sayac4 = 0;
+  for (int i = 0; i < 5; i++) {
+    print("$soyIsim2");
+  }
+
+  while (sayac3 < 5) {
+    print("$soyIsim3");
+    sayac3++;
+  }
+
+  do {
+    print("$soyIsim4");
+    sayac4++;
+  } while (sayac4 < 5);
+
+  for (int i = 1; i <= 100; i++) {
+    if (i % 15 == 0) {
+      print("${i}");
+    }
+  }
+
+  int verilensayi = 5;
+  int deger1 = 1;
+
+  for (int i = 1; i <= verilensayi; i++) {
+    deger1 = i * deger1;
+    print(deger1);
+  }
+  ;
 }
