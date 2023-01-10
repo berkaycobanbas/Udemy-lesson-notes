@@ -238,16 +238,16 @@ void main(List<String> args) {
       ? print("Bu üçgen ikizkenar üçgendir")
       : kenar1 == kenar2 && kenar1 == kenar3
           ? print("Bu üçgen eş kenar ayni zamanda  ikizkenar üçgendir")
-          : kenar1 != kenar2 && kenar1 != kenar3
+          : kenar1 != kenar2 && kenar1 != kenar3 && kenar2 != kenar3
               ? print("Bu üçgen çeşitkenar üçgendir")
               : print("Ters giden birşeyler oldu.");
 
-  int vizenot = 10;
-  int finalnotu = 60;
-  double vize40 = vizenot * 40 / 100;
-  double final60 = finalnotu * 60 / 100;
+  int vizeNot = 40;
+  int finalNotu = 60;
+  double vize40 = vizeNot * 0.40;
+  double final60 = finalNotu * 0.60;
   double ortalama = (vize40 + final60);
-  ortalama > 50
+  ortalama >= 50
       ? print("Dersi geçtiniz.Geçme notunuz:$ortalama")
       : print("Dersi geçemediniz.Notunuz : $ortalama");
 
@@ -272,16 +272,16 @@ void main(List<String> args) {
 
   for (int i = 1; i <= 100; i++) {
     if (i % 15 == 0) {
-      print("${i}");
+      print("${i * i}");
     }
   }
 
-  int verilensayi = 5;
+  int verilensayi = 6;
   int deger1 = 1;
 
   for (int i = 1; i <= verilensayi; i++) {
     deger1 = i * deger1;
-    print(deger1);
   }
+  print(deger1);
   ;
 }
