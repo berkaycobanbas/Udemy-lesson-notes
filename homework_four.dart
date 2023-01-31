@@ -3,7 +3,6 @@ void main(List<String> args) {
   List<int> numbers = List.filled(3, 0, growable: false);
   numbers[0] = 4;
   numbers[1] = 1;
-  numbers[2] = 9;
   print(numbers);
   print(numbers.length);
   print(numbers[2]);
